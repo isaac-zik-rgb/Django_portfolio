@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1> My personal Portofolio project</h1>
+        <h5> welcom {{name}}, you are {{age}}, and you are a {{Nationality}}</h5>
+    </header>
+    <section>
+        <h3> (3)Three things to become a succesful freelancer in Nigeria </h3>
+        <ul>
+            <p><li>Be motivated</li>
+                <br id="img">
+                
+                <img src="https://th.bing.com/th/id/OIP.rNIKNz6UaDGQpZrJJao8cwHaE9?w=302&h=202&c=7&r=0&o=5&pid=1.7" alt="this is RCC image">
+            </p>
+
+        </ul>
+    </section>
+
+    <section id="word_count">
+        <h3> word count form</h3>
+        <form method="POST" action="countNums">
+            {% csrf_token %}
+            <p><label for="texts"> User's feeds</label></p>
+            
+
+        <textarea name="texts" id="texts" rows="20" cols="40"></textarea><br>
+        <input type="submit" value="submit" style="background-color: blue; color: white;"> 
+    </form>
+        
+    </section>
+    
+</body>
+</html>
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h5 {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    {% for message in messages %}
+    <h5>{{message}}</h5>
+    {% endfor %}
+    <h4>User registration</h4>
+    
+    <form method="POST" action="register">
+        {% csrf_token %}
+       <p>Username:</p>
+       
+       <input type="text" name="username">
+    
+       <p>Email:</p> 
+       <input type="email" name="email">
+       <p>Password:</p> 
+       <input type="password" name="password" maxlength="10">
+       <p>Re-type Password:</p> 
+       <input type="password" name="password2" maxlength="10"><br>
+       <input type="submit" value="Register">
+       
+
+       
+
+    </form>
+</body>
+</html>
